@@ -4,12 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    style
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #div1{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            margin: 20px;
+        }
+        #img{
+            height: 300px;
+            width: 200px;
+        }
+        button{
+            width:150px;
+            padding: 10px;
+            margin: 20px;
+            font-size: 20px;
+        }
+    </style>
 </head>
 <body>
     <div>
         <img id="img" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWFzaXN2bXI5d3RlN2lscXg1YmI3Y2JnYnpzMDZpYnBuOHJ3eXhrMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Fu3OjBQiCs3s0ZuLY3/giphy.webp" alt="">
-        <div>
+        <div id="div1">
             <button id="eat">eat</button>
             <button id="play">play</button>
             <button id="sleep">sleep</button>
