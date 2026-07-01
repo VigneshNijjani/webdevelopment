@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    style
+</head>
+<body>
+    <div>
+        <img id="img" src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExaWFzaXN2bXI5d3RlN2lscXg1YmI3Y2JnYnpzMDZpYnBuOHJ3eXhrMCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/Fu3OjBQiCs3s0ZuLY3/giphy.webp" alt="">
+        <div>
+            <button id="eat">eat</button>
+            <button id="play">play</button>
+            <button id="sleep">sleep</button>
+        </div>
+    </div>
+    
+    <script>
+        let img=document.getElementById("img")
+           let eat= document.getElementById("eat")
+           eat.addEventListener("click",()=>{
+            img.src="https://media.tenor.com/r3OKaxMNC-YAAAAM/bibilabu-pipilabu.gif"
+           })
+           let play= document.getElementById("play")
+           play.addEventListener("click",()=>{
+            img.src="https://media1.tenor.com/m/ymQQRNxR9A4AAAAC/wuffyxdawg-woaf2727.gif"
+           })
+           let sleep= document.getElementById("sleep")
+           sleep.addEventListener("click",()=>{
+            img.src="https://media1.tenor.com/m/TE_jqQ1HW50AAAAd/dog-sleep-dog-sleeping-w-goofy-sleeping-sound.gif"
+           })
+    </script>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Ammas Pastries</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+* { margin:0;padding:0; box-sizing:border-box }
+
+body{
+font-family:Poppins , sans-serif;
+ background:#f5f5f5
+}
+
+.adds{
+ background:#f17f00;
+ color:#fff;
+ text-align:center;
+ font-size:12px;
+ padding:6px
+}
+
+header{
+ background:#fff;
+ box-shadow:0 2px 6px rgba(0,0,0,.1);
+ position:sticky; top:0;
+ z-index:9
+}
+
+.navbar{
+ padding:10px
+}
+
+.navbar img{
+ height:45px
+}
+
+.menu a{
+ font-size:12px;
+ color:#333;
+ text-decoration:none;
+ margin:0 8px
+}
+
+.menu a:hover{ color:#ff6000 }
+
+.search{
+ border:1px solid #ddd;
+ border-radius:20px;
+ padding:6px 12px;
+ font-size:12px;
+ width:220px
+}
+
+.menubar{
+ border-top:1px solid #eee;
+ border-bottom:2px solid #ff6000;
+ background:#fff;
+ text-align:center
+}
+
+.menubar a{
+ padding:10px;
+ font-size:13px;
+ font-weight:600;
+ color:#333;
+ text-decoration:none
+}
+
+.menubar a:hover{
+ color:#ff6000
+}
+
+.banner img{
+ width:100%;
+ max-height:420px;
+ object-fit:cover
+}
+
+section{
+ padding:30px 10px
+}
+
+h2{
+ font-size:20px;
+ font-weight:700;
+ text-align:center
+}
+
+.sub{
+ font-size:13px;
+ color:#777;
+ text-align:center;
+ margin-bottom:15px
+}
+
+.grid{
+ display:grid;
+ grid-template-columns:repeat(4,1fr);
+ gap:12px
+ 
+}
+
+.box{
+ background:#fff;
+ border-radius:10px;
+ padding:8px;
+ text-align:center
+}
+
+.box img{
+ width:100%;
+ aspect-ratio:1;
+ border-radius:8px
+}
+
+.box p{
+ font-size:12px;
+ margin-top:6px;
+ font-weight:600
+}
+
+.card{
+ border-radius:10px;
+ overflow:hidden
+}
+
+.card img{
+ aspect-ratio:1
+}
+
+footer{
+ background:#fff;
+ border-top:2px solid #ff6000;
+ text-align:center;
+ padding:15px;
+ font-size:12px
+}
+
+@media(max-width:768px){
+
+.grid{
+ grid-template-columns:repeat(2,1fr)
+}
+
+.search{
+ display:none
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="adds"> Home Delivery Available 45 Mins to 1 Hour 10:00 AM - 10:00 PM </div>
+
+<header>
+
+<div class="container d-flex justify-content-between align-items-center navbar">
+
+<img src="https://www.ammaspastries.in/frontend/img/ammas_logo.png">
+
+<input  class="search"   placeholder="Search">
+
+<div class="menu d-flex">
+
+<a href="#">Track</a>
+<a href="#">Wish</a>
+<a href="#">Cart</a>
+<a href="#">Login</a>
+
+</div>
+
+</div>
+
+<div class="menubar">
+
+<a href="#">Cakes</a>
+<a href="#">Snacks</a>
+<a href="#">Dessert</a>
+<a href="#">Chocolates</a>
+<a href="#">About</a>
+
+</div>
+
+</header>
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.ammaspastries.in/storage/banners/1774254154_69c0f84a9b3c1.jpg" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.ammaspastries.in/storage/banners/1774252447_69c0f19fd52dc.jpg" class="d-block w-100" alt="...">
+    </div>
+    
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<section>
+
+<h2> Deliver a Box Full of Smiles! </h2>
+
+<div class="sub"> One wish — what is it? </div>
+
+<div class="grid">
+
+<div class="box">
+<img src="https://www.ammaspastries.in/storage/category/1763536984_691d7058469fb.JPG">
+<p> Cakes </p>
+</div>
+
+<div class="box">
+<img src="https://www.ammaspastries.in/storage/category/1763539217_691d7911d5644.JPG">
+<p> Pastries </p>
+</div>
+
+<div class="box">
+<img src="https://www.ammaspastries.in/storage/category/1755942535_68a98e874b316.jpg">
+<p> Snacks </p>
+</div>
+
+<div class="box">
+<img src="https://www.ammaspastries.in/storage/category/1764591258_692d869a86396.webp">
+<p> Dessert </p>
+</div>
+
+<div class="box">
+<img src="https://www.ammaspastries.in/storage/category/1755941284_68a989a457f60.webp">
+<p> Dry Cakes </p>
+</div>
+
+<div class="box">
+<img src="https://www.ammaspastries.in/storage/category/1755940948_68a98854ae37a.jpg">
+<p> Breads </p>
+</div>
+
+<div class="box">
+<img src="https://www.ammaspastries.in/storage/category/1755941146_68a9891a51977.webp">
+<p> Chocolates </p>
+</div>
+
+<div class="box">
+<img src="https://www.ammaspastries.in/storage/category/1755941177_68a98939779b5.webp">
+<p> Cookies </p>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<h2> Curated for Every Moment </h2>
+
+<div class="sub"> Make gifting effortless </div>
+
+<div class="grid">
+
+<div class="card">
+<img src="https://www.ammaspastries.in/storage/category/1763118622_69170e1e0aa8f.png">
+<p class="text-center"> Birthday </p>
+</div>
+
+<div class="card">
+<img src="https://www.ammaspastries.in/storage/category/1755941636_68a98b040f04c.webp">
+<p class="text-center"> Premium </p>
+</div>
+
+<div class="card">
+<img src="https://www.ammaspastries.in/storage/category/1755941124_68a98904af2ee.jpeg">
+<p class="text-center"> Chocolates </p>
+</div>
+
+<div class="card">
+<img src="https://www.ammaspastries.in/storage/category/1759122038_68da1276f1b6c.jpg">
+<p class="text-center"> Doughnuts </p>
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p> © 2026 Ammas Pastries </p>
+
+<img src="https://www.ammaspastries.in/backend/img/payments.png" style="max-height:25px">
+
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+
+body {
+    display: flex;
+    margin: 0;
+}
+
+.level1 {
+    width: 40%;
+    height: 100vh;
+    border-right: 1px solid black;
+}
+
+.level2 {
+    width: 60%;
+    height: 100;
+    overflow-y: auto;
+    padding-bottom: 60px;
+    background-color: antiquewhite;
+}
+
+#a1{
+    display: flex;              
+    align-items: center; 
+    border: 2px solid black;
+    background-color: white;
+
+    
+}
+.b1{
+    
+    height: 40px;
+    width: 40px;
+    border: 2px solid black;
+    margin-left: 20px;
+    align-items: center;
+    border-radius: 50%;
+    background-image: url("https://tse1.mm.bing.net/th/id/OIP.CwovkGJe_uaZiwrA3gihBQAAAA?pid=Api&P=0&h=180");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.b2{
+    align-items: center;
+    height: 10px;    
+}
+.a2{
+    display: flex;
+    padding: 5px;
+    align-items: center; 
+
+}
+.b5{
+    display: flex;
+    
+
+}
+.b5 p{
+    width: fit-content;
+    margin-left: auto;
+    text-align: right;
+    border: 1px solid black;
+    border-radius: 10px 1px 10px 10px;
+    padding:10px;
+    background-color:lightgreen;
+}
+.b4{
+    margin-left: 10px;
+    align-items: center; 
+    border: 1px solid black;
+    border-radius: 1px 10px 10px 10px;
+    padding: 10px;
+    background-color: white;
+    
+}
+.a3{
+    display: flex;
+    padding: 5px;
+    align-items:center; 
+}
+.a4{
+ bottom: 3%;
+ position: fixed;
+ left: 45%;
+ width: 45%;
+}
+.a4 input{
+   width: 100%;
+   padding: 10px;
+}
+.z{
+    flex-direction: column;
+    padding-left: 20px;
+    align-items: center;
+    margin-left: 20px;
+
+}
