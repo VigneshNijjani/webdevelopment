@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color: rgb(219, 215, 215);
+
+        }
+        div{
+            display: flex;
+            flex-direction: column;
+            padding: 30px;
+
+        }
+        #container{
+            border: 5px solid black;
+            height: 400px;
+            width: 600px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            overflow-y: scroll;
+          
+        }
+        #buttons{
+            flex-direction: row;
+            padding: 20px;
+          
+            #red{
+                border: none;
+                background-color: red;
+                color: white;
+                border-radius: 5px;
+                height: 40px;
+                width: 120px;
+                font-size: 25px;
+                margin: 20px;
+                  cursor: pointer;
+            }
+            #green{
+                border: none;
+                background-color: green;
+                color: white;
+                border-radius: 5px;
+                height: 40px;
+                width: 120px;
+                font-size: 25px;
+                  cursor: pointer;
+                margin: 20px;
+            }
+            #yellow{
+                border: none;
+                background-color: yellow;
+                color:black;
+                border-radius: 5px;
+                height: 40px;
+                width: 120px;
+                font-size: 25px;
+                  cursor: pointer;
+                margin: 20px;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <div id="container">
+       
+    </div>
+     <div id="buttons">
+        <button id="red">red</button>
+        <button id="green">green</button>
+        <button id="yellow">yellow</button>
+        </div>
+        </div>
+        <script>
+            let container=document.getElementById("container")
+            let red=document.getElementById("red")
+            let green=document.getElementById("green")
+            let yellow=document.getElementById("yellow")
+            red.addEventListener('click',()=>{
+                let box = document.createElement("div")
+                box.style.width="30px"
+                box.style.height="30px"
+                box.style.border="2px solid"
+                box.style.backgroundColor="red"
+                container.appendChild(box)
+            })
+            green.addEventListener('click',()=>{
+                let box = document.createElement("div")
+                box.style.width="50px"
+                box.style.height="50px"
+                box.style.border="2px solid"
+                box.style.backgroundColor="green"
+                container.appendChild(box)
+            })
+            yellow.addEventListener('click',()=>{
+                let box = document.createElement("div")
+                box.style.width="50px"
+                box.style.height="50px"
+                box.style.border="2px solid"
+                box.style.backgroundColor="yellow"
+                container.appendChild(box)
+            })
+
+        </script>
+</body>
+</html>
