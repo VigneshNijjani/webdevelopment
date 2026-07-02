@@ -13,6 +13,8 @@
             display: flex;
             flex-direction: column;
             padding: 30px;
+            margin: 2px;
+            border: none;
 
         }
         #container{
@@ -88,20 +90,21 @@
                 box.style.height="30px"
                 box.style.border="2px solid"
                 box.style.backgroundColor="red"
+        
                 container.appendChild(box)
             })
             green.addEventListener('click',()=>{
                 let box = document.createElement("div")
-                box.style.width="50px"
-                box.style.height="50px"
+                box.style.width="30px"
+                box.style.height="30px"
                 box.style.border="2px solid"
                 box.style.backgroundColor="green"
                 container.appendChild(box)
             })
             yellow.addEventListener('click',()=>{
                 let box = document.createElement("div")
-                box.style.width="50px"
-                box.style.height="50px"
+                box.style.width="30px"
+                box.style.height="30px"
                 box.style.border="2px solid"
                 box.style.backgroundColor="yellow"
                 container.appendChild(box)
