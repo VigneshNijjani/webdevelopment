@@ -4,23 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style></style>
+    <style>
+        #box{
+            margin: auto;
+            border: 1px solid;
+            width: 85%;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-evenly;
+            align-items: center;
+            
+        }
+        span{
+            border: 1px solid;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background-image:url('https://t3.ftcdn.net/jpg/15/45/42/90/360_F_1545429071_wiF4A4vtpwCon2tFFLb3hJ0ke5SQkEWu.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .coin{
+            border: 1px solid;
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+            background-image: url("https://t3.ftcdn.net/jpg/15/45/42/90/360_F_1545429071_wiF4A4vtpwCon2tFFLb3hJ0ke5SQkEWu.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation-name: coin_flip;
+            animation-duration:2s;
+            animation-timing-function: linear;
+            animation-iteration-count: 1;
+           
+        }
+       @keyframes coin_flip {
+    from {
+        transform: rotatex(0deg);
+    }
+    to {
+        transform: rotatex(1800deg);
+    }
+}
+        
+        #flip{
+            width: 100px;
+            height: 40px;
+            border-radius: 5px ;
+            font-size: 15px;
+        }
+    </style>
 </head>
 <body>
     <div id="box">
-        <div id="coin"></div>
+        <span id="coin"></span>
         <button id="flip">flip coin</button>
     </div>
+    
     <script>
-        let box=document.getElementById("box")
-        let button=document.getElementById("flip")
-        let coin=document.createElement('div')
-        let flag=0
-        button.addEventListener('click',()=>{
-            if (flag==0){
-            box.appendChild("coin")
-        flag=1}
-        })
+        let images=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtAvzWtz2tTQanIhFSx10nbOzy4EF3Kz2gha2dC0BnCw&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9UVdL9v3Rk14ECRo5EW31XjCmpWM0HnzyNBPU4Z1YDw&s"]
+        let btn=document.getElementById("flip")
+        btn.addEventListener('click',()=>{
+            let coin=document.getElementById("coin")
+            coin.classList.add("coin")
+            const random = Math.floor(Math.random() * 2);
+            coin.style.backgroundImage=`url(${images[random]})`
+            
+        });
+        coin.addEventListener("animationend", () => {
+    coin.classList.remove("coin");
+});
+
+        
     </script>
 </body>
 </html>
