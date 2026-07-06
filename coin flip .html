@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <div id="box">
+        <div id="coin"></div>
+        <button id="flip">flip coin</button>
+    </div>
+    <script>
+        let box=document.getElementById("box")
+        let button=document.getElementById("flip")
+        let coin=document.createElement('div')
+        let flag=0
+        button.addEventListener('click',()=>{
+            if (flag==0){
+            box.appendChild("coin")
+        flag=1}
+        })
+    </script>
+</body>
+</html>
