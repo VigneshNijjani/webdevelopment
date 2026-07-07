@@ -1,85 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        #box{
-            margin: auto;
-            border: 1px solid;
-            width: 85%;
-            height: 65vh;
-            display: flex;
-            flex-direction: column;
-            justify-content:space-evenly;
-            align-items: center;
-            
-        }
-        span{
-            border: 1px solid;
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-            background-image:url('https://t3.ftcdn.net/jpg/15/45/42/90/360_F_1545429071_wiF4A4vtpwCon2tFFLb3hJ0ke5SQkEWu.jpg');
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        .coin{
-            border: 1px solid;
-            height: 150px;
-            width: 150px;
-            border-radius: 50%;
-            background-image: url("https://t3.ftcdn.net/jpg/15/45/42/90/360_F_1545429071_wiF4A4vtpwCon2tFFLb3hJ0ke5SQkEWu.jpg");
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            animation-name: coin_flip;
-            animation-duration:2s;
-            animation-timing-function: linear;
-            animation-iteration-count: 1;
-           
-        }
-       @keyframes coin_flip {
-    from {
-        transform: rotatex(0deg);
-        background-image: url("https://t3.ftcdn.net/jpg/15/45/42/90/360_F_1545429071_wiF4A4vtpwCon2tFFLb3hJ0ke5SQkEWu.jpg");
-    }
-    to {
-        transform: rotatex(1800deg);
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coin Flip</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
 }
-        
-        #flip{
-            width: 100px;
-            height: 40px;
-            border-radius: 5px ;
-            font-size: 15px;
-        }
-    </style>
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#141E30,#243B55);
+}
+
+#box{
+    width:380px;
+    padding:40px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:30px;
+}
+
+h1{
+    color:white;
+    letter-spacing:2px;
+}
+
+#coin{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:5px solid gold;
+    background-image:url("https://t3.ftcdn.net/jpg/15/45/42/90/360_F_1545429071_wiF4A4vtpwCon2tFFLb3hJ0ke5SQkEWu.jpg");
+    background-position:center;
+    background-size:cover;
+    box-shadow:0 0 20px gold;
+}
+
+.coin{
+    animation:flip 1.5s linear;
+}
+
+@keyframes flip{
+
+    from{
+        transform:rotateX(0deg);
+    }
+
+    to{
+        transform:rotateX(1800deg);
+    }
+
+}
+
+#flip{
+    width:170px;
+    height:50px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(to right,#ff9800,#ff5722);
+    color:white;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#flip:hover{
+    transform:translateY(-3px);
+}
+
+#flip:disabled{
+    background:gray;
+    cursor:not-allowed;
+}
+</style>
 </head>
 <body>
-    <div id="box">
-        <span id="coin"></span>
-        <button id="flip">flip coin</button>
-    </div>
-    
-    <script>
-        let images=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtAvzWtz2tTQanIhFSx10nbOzy4EF3Kz2gha2dC0BnCw&s","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9UVdL9v3Rk14ECRo5EW31XjCmpWM0HnzyNBPU4Z1YDw&s"]
-        let btn=document.getElementById("flip")
-        btn.addEventListener('click',()=>{
-            let coin=document.getElementById("coin")
-            coin.classList.add("coin")
-            const random = Math.floor(Math.random() * 2);
-            coin.style.backgroundImage=`url(${images[random]})`
-            
-        });
-        coin.addEventListener("animationend", () => {
-    coin.classList.remove("coin");
+
+<div id="box">
+
+<h1>🪙 Coin Flip</h1>
+
+<span id="coin"></span>
+
+<button id="flip">Flip Coin</button>
+
+</div>
+
+<script>
+
+const images=[
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtAvzWtz2tTQanIhFSx10nbOzy4EF3Kz2gha2dC0BnCw&s",
+"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9UVdL9v3Rk14ECRo5EW31XjCmpWM0HnzyNBPU4Z1YDw&s"
+];
+
+const coin=document.getElementById("coin");
+const btn=document.getElementById("flip");
+
+let result=0;
+let flipping=false;
+
+btn.addEventListener("click",()=>{
+
+    if(flipping) return;
+
+    flipping=true;
+    btn.disabled=true;
+
+    result=Math.floor(Math.random()*2);
+
+    // Coin flip sound (change path if needed)
+    let sound=new Audio('./freesound_community-coin-flip-37787.mp3');
+    sound.play();
+
+    coin.classList.add("coin");
+
 });
 
-        
-    </script>
+coin.addEventListener("animationend", () => {
+
+    coin.classList.remove("coin");
+
+    coin.style.backgroundImage = `url(${images[result]})`;
+
+    flipping = false;
+    btn.disabled = false;
+
+
+    setTimeout(() => {
+        coin.style.backgroundImage =
+        'url("https://t3.ftcdn.net/jpg/15/45/42/90/360_F_1545429071_wiF4A4vtpwCon2tFFLb3hJ0ke5SQkEWu.jpg")';
+    }, 3000);
+
+});
+
+</script>
+
 </body>
 </html>
