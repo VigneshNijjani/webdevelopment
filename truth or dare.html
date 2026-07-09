@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Truth or Dare</title>
+
+<style>
+
+body{
+    background-color:gray;
+    font-family: Arial;
+}
+
+#container{
+    width:90%;
+    height:80vh;
+    margin:auto;
+    display:grid;
+    grid-template-columns:30% 30% 30%;
+    grid-template-rows:33% 33% 33%;
+    justify-content:center;
+    gap:8px;
+    border:2px solid white;
+    color: white;
+    background: black;
+}
+
+.box{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:10px;
+    
+}
+
+.center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+img{
+    height:170px;
+    transition:3s;
+}
+
+button{
+    margin-top:20px;
+    height:40px;
+    width:150px;
+    font-size:18px;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.05);
+        border: 1px solid white;
+        box-shadow: 0 0 15px rgb(240, 238, 238);
+    }
+}
+
+</style>
+</head>
+<body>
+
+<center>
+
+<div id="container">
+
+<div class="box">Sing your favorite song.</div>
+<div class="box">What's your biggest fear?</div>
+<div class="box">Dance for one minute.</div>
+
+<div class="box">Change your profile picture.</div>
+
+<div class="center">
+<img id="bottle" src="./853-8535517_kingfisher-lager-strong-65-cl-india-kingfisher-beer.png">
+</div>
+
+<div class="box">Tell a funny joke.</div>
+
+<div class="box">Do 10 push-ups.</div>
+<div class="box">What's your funniest dream?</div>
+<div class="box">Call your best friend.</div>
+
+</div>
+
+<button id="btn">Spin</button>
+
+
+</center>
+
+<script>
+
+let bottle=document.getElementById("bottle");
+let btn=document.getElementById("btn");
+
+let total=0;
+btn.addEventListener('click',()=>{
+        
+    let spin=Math.floor(Math.random()*3000)+4500;
+
+    total=total+spin;
+
+    bottle.style.transform=`rotate(${total}deg)`;
+
+})
+
+</script>
+
+</body>
+</html>
