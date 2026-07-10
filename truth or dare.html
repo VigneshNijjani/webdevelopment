@@ -26,8 +26,22 @@ body{
     background: darkgray;
 }
 
-.box{
+#box1{
+    border-top-left-radius: 50%;
+}
+#box2{
+    border-top-right-radius: 50%;
 
+}
+#box3{
+    border-bottom-left-radius: 50%;
+}
+#box4{
+    border-bottom-right-radius: 50%;
+}
+
+.box{
+    border: 1px solid;
     display:flex;
     justify-content:center;
     align-items:center;
@@ -43,7 +57,7 @@ body{
 }
 
 img{
-    height:170px;
+    height:300px;
     transition:3s;
 }
 
@@ -71,9 +85,9 @@ button{
 
 <div id="container">
 
-<div class="box">Sing your favorite song.</div>
+<div id="box1" class="box">Sing your favorite song.</div>
 <div class="box">What's your biggest fear?</div>
-<div class="box">Dance for one minute.</div>
+<div id="box2" class="box">Dance for one minute.</div>
 
 <div class="box">Change your profile picture.</div>
 
@@ -83,9 +97,9 @@ button{
 
 <div class="box">Tell a funny joke.</div>
 
-<div class="box">Do 10 push-ups.</div>
+<div id="box3" class="box">Do 10 push-ups.</div>
 <div class="box">What's your funniest dream?</div>
-<div class="box">Call your best friend.</div>
+<div id="box4" class="box">Call your best friend.</div>
 
 </div>
 

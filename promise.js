@@ -261,4 +261,10 @@
 
 
 
-
+let a=10;
+var b=20;
+const c=30;
+debugger;
+console.log(a)
+console.log(b)
+console.log(c)
